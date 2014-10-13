@@ -47,8 +47,24 @@
                         {{/each}}
                     </ul>
                 
-                    <input type="text" placeholder="Type your message here..."/>
-                    </script>
+                    {{
+                        input type="text" 
+                        id="new_message" 
+                        placeholder="Type your message here..."
+                        value=newMessage 
+                        action='createMessage'
+                    }}
+    </script>
+
+    <script type='text/x-handlebars' data-template-name='login'>
+        <h2>Plese create a username below to continue:</h2>
+        {{
+        input type='text' 
+        value=userName
+        placeholder='What would you like your username to be?'
+        }}
+         <button {{action "loginSubmit" }}>Chatter Away!</button>
+    </script>
 
 
 
@@ -81,6 +97,8 @@
         <script src="js/router.js"></script>
         <script src="js/models/messages.js"></script>
         <script src="js/controllers/message_controller.js"></script>
+        <script src="js/controllers/indexController.js"></script>
+        <script src="js/controllers/loginController.js"></script>
 
         <!-- endbuild -->
 </body>
